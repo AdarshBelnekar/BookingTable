@@ -6,7 +6,7 @@ const connectDB = require('./config/db');
 const bookingRoutes = require('./routes/bookingRoutes.js'); // Import booking routes
 
 const app = express();
-const PORT =process.env.FRONTEND_URL || 5000;
+const PORT =pprocess.env.PORT || 5000
 
 // Connect to MongoDB
 connectDB();
