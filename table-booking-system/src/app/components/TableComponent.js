@@ -4,15 +4,14 @@ const TableComponent = () => {
   const [bookingData, setBookingData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-const api="https://bookingtable-g9lx.onrender.com"
+
   useEffect(() => {
     // Fetch bookings from API
     const fetchBookings = async () => {
       try {
-        const response = await fetch(`${api}/api/book`); // Replace with your API URL
+        const response = await fetch("https://bookingtable-g9lx.onrender.com/api/book"); // Replace with your API URL
         if (!response.ok) {
           throw new Error("Failed to fetch bookings.");
-          console.log(response);
         }
         const data = await response.json();
         setBookingData(data.bookings); // Update state with fetched bookings
@@ -32,7 +31,7 @@ const api="https://bookingtable-g9lx.onrender.com"
     if (!confirmDelete) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/book/${id}`, {
+      const response = await fetch(`https://bookingtable-g9lx.onrender.com/api/book/${id}`, {
         method: "DELETE",
       });
 
