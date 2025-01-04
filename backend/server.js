@@ -6,7 +6,7 @@ const connectDB = require('./config/db');
 const bookingRoutes = require('./routes/bookingRoutes.js'); // Import booking routes
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT =" https://booking-table-43da.vercel.app/";
 
 // Connect to MongoDB
 connectDB();
