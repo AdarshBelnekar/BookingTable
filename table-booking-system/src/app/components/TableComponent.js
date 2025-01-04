@@ -10,7 +10,7 @@ const API_URL="https://bookingtable-g9lx.onrender.com";
     const fetchBookings = async () => {
       
       try {
-        const response = await fetch(`${API_URL}/api/book/`); // Replace with your API URL
+        const response = await fetch(`${API_URL}/api/book`); // Replace with your API URL
         if (!response.ok) {
           throw new Error("Failed to fetch bookings.");
         }
