@@ -8,8 +8,9 @@ const TableComponent = () => {
   useEffect(() => {
     // Fetch bookings from API
     const fetchBookings = async () => {
+      const API_URL="https://bookingtable-g9lx.onrender.com";
       try {
-        const response = await fetch("https://bookingtable-g9lx.onrender.com"); // Replace with your API URL
+        const response = await fetch(`${API_URL}/api/book/${id}`); // Replace with your API URL
         if (!response.ok) {
           throw new Error("Failed to fetch bookings.");
         }
@@ -31,7 +32,7 @@ const TableComponent = () => {
     if (!confirmDelete) return;
 
     try {
-      const response = await fetch(`https://bookingtable-g9lx.onrender.com`, {
+      const response = await fetch("https://bookingtable-g9lx.onrender.com", {
         method: "DELETE",
       });
 
