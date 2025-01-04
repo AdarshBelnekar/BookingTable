@@ -9,7 +9,7 @@ const TableComponent = () => {
     // Fetch bookings from API
     const fetchBookings = async () => {
       try {
-        const response = await fetch("https://bookingtable-g9lx.onrender.com"); // Replace with your API URL
+        const response = await fetch("https://bookingtable-g9lx.onrender.com/api/book"); // Replace with your API URL
         if (!response.ok) {
           throw new Error("Failed to fetch bookings.");
           console.log(response);
