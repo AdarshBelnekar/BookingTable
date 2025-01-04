@@ -27,12 +27,13 @@ const TableComponent = () => {
 
   // Delete booking from backend and UI
   const deleteBooking = async (id) => {
+    const API_URL="https://bookingtable-g9lx.onrender.com/api/book"
     const confirmDelete = window.confirm("Are you sure you want to delete this booking?");
     if (!confirmDelete) return;
-    const API_URL="https://bookingtable-g9lx.onrender.com"
+    
 
     try {
-      const response = await fetch(`${API_URL}/api/book/${id}`, {
+      const response = await fetch(`${API_URL}/${id}`, {
         method: "DELETE",
       });
 
