@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
 });
 
 // GET: Fetch all bookings
-router.get('/api/book', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const bookings = await Booking.find();
     res.json({ bookings });
