@@ -28,7 +28,7 @@ export default function BookingPage() {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch("https://bookingtable-g9lx.onrender.com", {
+      const response = await fetch("https://bookingtable-g9lx.onrender.com/api/book", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
