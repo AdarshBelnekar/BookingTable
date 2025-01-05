@@ -12,7 +12,7 @@ const AvailabilityPage = () => {
   useEffect(() => {
     const fetchBookedSlots = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/book/selected-slots");
+        const response = await fetch("https://bookingtable-g9lx.onrender.com/api/book/selected-slots");
         const data = await response.json();
         if (data.selectedSlots) {
           setBookedSlots(data.selectedSlots.map((slot) => slot.selectedSlot));
